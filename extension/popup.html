@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DSH Google Search</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>DSH Google Search</h1>
+      <p id="status" class="status">正在检查连接…</p>
+      <label>
+        本机端口
+        <input id="port" type="number" min="1" max="65535" value="32145" />
+      </label>
+      <label>
+        配对口令
+        <input id="token" type="password" autocomplete="off" placeholder="至少 16 个字符" />
+      </label>
+      <button id="save" type="button">保存并连接</button>
+      <p class="hint">扩展只访问 Google 搜索页，并只连接 127.0.0.1。</p>
+    </main>
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>

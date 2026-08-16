@@ -1,0 +1,5 @@
+extension/local-config.js
+docs/
+tests/
+coverage/
+*.log

@@ -1,0 +1,55 @@
+{
+  "name": "dsh-web-search-google-chrome",
+  "version": "0.1.0",
+  "description": "Free local Google search provider for DeepSeek Harness using the user's Chrome profile",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moreesindo/dsh-google-chrome-search.git"
+  },
+  "homepage": "https://github.com/moreesindo/dsh-google-chrome-search#readme",
+  "bugs": "https://github.com/moreesindo/dsh-google-chrome-search/issues",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "google-search",
+    "chrome-extension"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "extension",
+    "!extension/local-config.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run build && npm test"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "ws": "^8.18.3"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-web": "^0.1.0-rc.6"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-web": "^0.1.0-rc.6",
+    "@types/node": "^22.15.0",
+    "@types/ws": "^8.18.1",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
